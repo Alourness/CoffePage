@@ -1,5 +1,5 @@
 # MAKARO
-This is my first fictional project using html, css, js and AI, i just practise with my knowledge and use AI.
+This is my first fictional project using html, css, js. I just practise with my knowledge and use AI.
 All informations is not real.
 
 # BUILT WITH
