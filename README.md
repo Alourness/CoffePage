@@ -7,5 +7,8 @@ All informations is not real.
 - CSS
 - JavaScript
 
+# Run locally
+Clone or download this repository, then open `index.html` in your browser. No installation or build step is required.
+
 # Note
 The sign-up form is for demonstration purposes only. It does not create an account or save any data.
