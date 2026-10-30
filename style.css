@@ -8,6 +8,11 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+::selection {
+    color: #201b22;
+    background: #dcd0e8;
+}
+
 header, footer {
     padding: 22px 8%;
     display: flex;
@@ -58,8 +63,10 @@ h1 { margin-bottom: 16px; font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1.08
 .section-heading .eyebrow { margin-bottom: 8px; }
 h2 { margin-bottom: 0; font-size: 2rem; }
 .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.menu-card { padding: 14px 18px 18px; border: 1px solid #e8e1de; background: #fffdfb; }
+.menu-card { padding: 14px 18px 18px; border: 1px solid #e8e1de; background: #f5f0eb; transition: background-color .18s ease, border-color .18s ease; }
+.menu-card:hover { border-color: #cbb9d6; background: #eee8f5; }
 .menu-card.featured { border-color: #ded0e4; background: #f5f0f7; }
+.menu-card.featured:hover { background: #e9e0ef; }
 .menu-art { height: 110px; margin-bottom: 13px; display: grid; place-items: center; background: #f1ece8; }
 .pastry-art { background: #f5eee4; }
 .macaron-art { background: #eee8f5; }
