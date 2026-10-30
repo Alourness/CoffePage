@@ -77,6 +77,40 @@ nav a:hover {
     background: #ded4e8;
 }
 
+.signup-dialog {
+    width: min(360px, calc(100% - 32px));
+    padding: 24px;
+    border: 1px solid #ded4e8;
+    border-radius: 8px;
+    background: #faf8f6;
+    color: #30243a;
+}
+
+.signup-dialog::backdrop {
+    background: rgb(32 27 34 / 45%);
+}
+
+.signup-form {
+    display: grid;
+    gap: 12px;
+}
+
+.signup-form input {
+    padding: 10px;
+    border: 1px solid #ded4e8;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.dialog-close {
+    padding: 8px;
+    border: 0;
+    background: transparent;
+    color: #594b5e;
+    font: inherit;
+    cursor: pointer;
+}
+
 .hero, .menu {
     width: min(1080px, 84%);
     margin: 0 auto;
