@@ -1,57 +1,83 @@
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     min-height: 100vh;
     margin: 0;
-    display: flex;
-    flex-direction: column;
     color: #201b22;
     background: #faf8f6;
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
-header {
-    min-height: 88px;
-    padding: 0 8%;
+header, footer {
+    padding: 22px 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #eee8f5;
-    border-bottom: 1px solid #ded4e8;
 }
 
-.brand {
-    color: #30243a;
-    font-family: Georgia, serif;
-    font-size: 1.65rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
+header { background: #eee8f5; border-bottom: 1px solid #ded4e8; }
+.brand { color: #30243a; font: 700 1.65rem Georgia, serif; letter-spacing: .04em; text-decoration: none; }
+.brand span { color: #8d7098; }
+nav { display: flex; gap: 30px; }
+nav a { color: #403747; font-size: .9rem; text-decoration: none; }
+nav a:hover { color: #8d7098; }
+
+.hero, .menu { width: min(1080px, 84%); margin: 0 auto; }
+.hero {
+    min-height: 440px;
+    padding: 48px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.eyebrow { color: #75647d; font-size: .7rem; font-weight: 600; letter-spacing: .16em; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2 { color: #30243a; font-family: Georgia, serif; font-weight: 400; }
+h1 { margin-bottom: 16px; font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1.08; }
+.intro { max-width: 340px; color: #6f666d; line-height: 1.7; }
+
+.button {
+    margin-top: 14px;
+    padding: 13px 18px;
+    display: inline-flex;
+    gap: 18px;
+    align-items: center;
+    border-radius: 3px;
+    background: #30243a;
+    color: #fffaf5;
+    font-size: .85rem;
     text-decoration: none;
 }
+.button:hover { background: #594b5e; }
+.hero-image { width: 100%; max-height: 350px; object-fit: contain; }
 
-.tagline {
-    color: #594b5e;
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
+.menu { padding: 30px 0 76px; }
+.section-heading { margin-bottom: 25px; text-align: center; }
+.section-heading .eyebrow { margin-bottom: 8px; }
+h2 { margin-bottom: 0; font-size: 2rem; }
+.menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.menu-card { padding: 14px 18px 18px; border: 1px solid #e8e1de; background: #fffdfb; }
+.menu-card.featured { border-color: #ded0e4; background: #f5f0f7; }
+.menu-art { height: 110px; margin-bottom: 13px; display: grid; place-items: center; background: #f1ece8; }
+.pastry-art { background: #f5eee4; }
+.macaron-art { background: #eee8f5; }
+.menu-art svg { width: 120px; height: 90px; }
+h3 { margin-bottom: 6px; color: #30243a; font: 1.1rem Georgia, serif; }
+.menu-card p { margin-bottom: 15px; color: #756c72; font-size: .82rem; }
+.price { color: #594033; font-size: .9rem; font-weight: 600; }
+.price small { color: #756c72; font-size: .75rem; font-weight: 400; }
+
+footer { gap: 16px; background: #302a31; color: #f4eee8; font-size: .8rem; }
+footer p { margin: 0; }
+.footer-brand { color: #f4eee8; font-size: 1.3rem; }
+
+@media (max-width: 680px) {
+    header, footer { padding-right: 6%; padding-left: 6%; }
+    .hero, .menu { width: 88%; }
+    .hero { padding-top: 38px; grid-template-columns: 1fr; gap: 8px; }
+    .hero-image { max-height: 270px; }
+    .menu-grid { grid-template-columns: 1fr; }
+    footer { align-items: flex-start; flex-direction: column; }
 }
-
-main {
-    flex: 1;
-}
-
-footer {
-    padding: 22px 8%;
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    background: #302a31;
-    color: #f4eee8;
-    font-size: 0.8rem;
-}
-
-footer p {
-    margin: 0;
-}
-
