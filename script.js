@@ -7,8 +7,7 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     const nickname = form.elements.nickname.value.trim();
     if (!nickname) return;
-    accountButton.textContent = nickname;
+    accountButton.textContent = `Welcome, ${nickname}`;
     dialog.close();
-    alert(`Welcome ${nickname}!`);
 });
 dialog.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
