@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+::selection {
+    color: #201b22;
+    background: #dcd0e8;
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -42,6 +48,7 @@ header {
 
 nav {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
@@ -53,6 +60,21 @@ nav a {
 
 nav a:hover {
     color: #8d7098;
+}
+
+.account-button {
+    padding: 9px 15px;
+    border: 1px solid #594b5e;
+    border-radius: 4px;
+    background: transparent;
+    color: #30243a;
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.account-button:hover {
+    background: #ded4e8;
 }
 
 .hero, .menu {
@@ -140,12 +162,14 @@ h2 {
 }
 
 .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 26px;
 }
 
 .menu-card {
+    flex: 0 1 calc((100% - 52px) / 3);
     padding: 14px 18px 18px;
     border: 1px solid #e8e1de;
     border-radius: 8px;
@@ -215,13 +239,22 @@ footer p {
 }
 
 @media (max-width: 760px) {
-    .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .menu-card {
+        flex-basis: calc((100% - 26px) / 2);
     }
 }
 
 @media (max-width: 520px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
+    nav {
+        gap: 12px;
+    }
+
+    .account-button {
+        padding: 8px 10px;
+        font-size: 0.78rem;
+    }
+
+    .menu-card {
+        flex-basis: 100%;
     }
 }
