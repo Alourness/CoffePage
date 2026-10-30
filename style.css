@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: #201b22;
+    background: #faf8f6;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+header {
+    min-height: 88px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eee8f5;
+    border-bottom: 1px solid #ded4e8;
+}
+
+.brand {
+    color: #30243a;
+    font-family: Georgia, serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+
+.tagline {
+    color: #594b5e;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    background: #302a31;
+    color: #f4eee8;
+    font-size: 0.8rem;
+}
+
+footer p {
+    margin: 0;
+}
+
